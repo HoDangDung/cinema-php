@@ -22,7 +22,8 @@
     font-weight: bold;
     font-family: var(--bs-body-font-family) !important;
   }
-  .container>form{
+
+  .container>form {
     box-shadow: 0 0 1rem 0.5rem black;
     background-color: #f5f5f5d9;
   }
@@ -34,21 +35,33 @@
   ?>
   <div class="container py-4 d-flex justify-content-center">
     <form class="card p-3" method="post" action="?route=addType" style="width: 60%;">
-      <h3 class="text-center font-weight-bold">Thêm thể loại</h3>
+      <h3 class="text-center font-weight-bold">Danh sách thể loại</h3>
       <div class="mb-3">
-        <label for="fullname" class="form-label">Tên thể loại</label>
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Tên thể loại</th>
+              <th scope="col">Mã thể loại</th>
+            </tr>
+          </thead>
+          <tbody>
+          <?php  $index = 0;
+          foreach ($types as $t) { ?>
+            <tr>
+              <th scope="row"><?php echo ++$index?></th>
+              <td><?php echo $t['type'] ?></td>
+              <td><?php echo $t['id'] ?></td>
+            </tr>
+          <?php } ?>
+          </tbody>
+        </table>
+      </div>
+      <div class="mb-3">
+        <label for="fullname" class="form-label">Thêm thể loại</label>
         <input type="text" class="form-control" id="type" name="type" required>
       </div>
-      <div class="mb-3">
-        <label for="fullname" class="form-label">Thể loại</label>
-        <select name="types" class="form-control">
-          <?php foreach ($types as $t) { ?>
-            <option value="<?php echo $t['id'] ?>">
-              <?php echo $t['type'] ?>
-            </option>
-          <?php } ?>
-        </select>
-      </div>
+      
       <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-danger font-weight-bold">Thêm</button>
       </div>

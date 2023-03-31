@@ -2,7 +2,7 @@
 include_once('shares/header.php');
 ?>
 <section class="banner-section">
-    <div class="banner-bg bg-fixed" style="background:url('assets/img/banner/banner-1.jpg')"></div>
+    <div class="banner-bg bg-fixed" style="background:url('views/assets/img/banner/banner-1.jpg')"></div>
     <div class="container">
         <div class="banner-content">
             <h1 class="title  cd-headline clip"><span class="d-block">Galaxy Play</span> for
@@ -26,7 +26,7 @@ include_once('shares/header.php');
                 <div class="tab-item active">
                     <form class="ticket-search-form" method="get" action="movies.php">
                         <div class="form-group large">
-                            <input type="text" placeholder="Tìm kiếm phim..." name="keyword" />
+                            <input type="text" placeholder="Tìm kiếm phim..."name="keyword" />
                             <button type="submit"><i class="fas fa-search"></i></button>
                         </div>
                         <div class="form-group">
@@ -47,7 +47,7 @@ include_once('shares/header.php');
                 <div class="article-section padding-bottom">
                     <div class="section-header-1">
                         <h2 class="title">movies</h2>
-                        <a class="view-more" href="movie-grid.html">View More <i class="fal fa-long-arrow-alt-right"></i> </a>
+                        <a class="view-more" href="?">View More <i class="fal fa-long-arrow-alt-right"></i> </a>
                     </div>
                     <div class="row mb-30-none justify-content-center">
                         <?php
