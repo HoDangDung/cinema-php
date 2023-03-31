@@ -10,18 +10,18 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Website xem phim</title>
-
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/jquery.animatedheadline.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="shortcut icon" href="views/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="views/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="views/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="views/assets/css/animate.css">
+    <link rel="stylesheet" href="views/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="views/assets/css/odometer.css">
+    <link rel="stylesheet" href="views/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="views/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="views/assets/css/nice-select.css">
+    <link rel="stylesheet" href="views/assets/css/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="views/assets/css/style.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@ session_start();
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="?">
-                        <img src="assets/img/logo/logo.png" alt="logo">
+                        <img src="views/assets/img/logo/logo.png" alt="logo">
                     </a>
                 </div>
                 <ul class="menu">

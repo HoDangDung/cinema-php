@@ -1,5 +1,5 @@
 <?php
-include_once('shares/header.php');
+include 'shares/header.php';
 ?>
 <section class="details-banner" style="background:url('https://images.unsplash.com/photo-1458053688450-eef5d21d43b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNpbmVtYSUyMHJvb218ZW58MHx8MHx8&w=1000&q=80')">
     <div class="container">
