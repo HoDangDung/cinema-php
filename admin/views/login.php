@@ -9,14 +9,15 @@
 </head>
 <style>
     .bg-stone-200 {
-        background-color: #808080a6 !important;
+        background-color: #0000009e !important;
+        box-shadow: 0 0.5rem 2rem 1rem;
     }
 </style>
 
 <body class="bg-gray-100">
     <div class="flex items-center justify-center h-screen b" style="
     background-image: url('https://chuyendoiso.laichau.gov.vn/uploads/news/2022_12/netflix-16695549643941955374520-0-0-1125-1800-crop-16695549741742062446321.jpeg');">
-        <div class="bg-stone-200 p-10 rounded-lg shadow-md">
+        <div class="bg-stone-200 p-10 rounded-lg">
             <h1 class="text-neutral-50 text-2xl text-center font-bold mb-5">Login Admin</h1>
             <form method="POST" action="?route=login">
                 <div class="mb-5">
