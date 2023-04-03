@@ -17,6 +17,11 @@ class MovieModel
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    function search()
+    {
+       
+    }
+
     function getMoive()
     {
         $stmt = $this->db->prepare("select * from movie join types on typeId = id");
@@ -25,7 +30,8 @@ class MovieModel
         return $movies;
     }
 
-    function getDetailsMovies($movieId){
+    function getDetailsMovies($movieId)
+    {
         $stmt = $this->db->prepare("SELECT * from movie join types on typeId = id where movieId = :movieId");
         $stmt->bindParam(":movieId", $movieId);
         $stmt->execute();

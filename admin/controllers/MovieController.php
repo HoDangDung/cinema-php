@@ -67,13 +67,23 @@ class MovieController
     {
         $types = $this->model->getTypes();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            if (!$_POST['type']) {
-                header('Location: ?route=addType');
-            } else {
-                $this->model->addType($_POST['type']);
-                header('Location: ?route=list');
-            }
+            $this->model->addType($_POST['type']);
+            header('Location: ?route=addType');
         }
+        require_once('views/addtype.php');
+    }
+
+    function editType()
+    {
+        $id = $_POST['id'];
+        $type = $_POST['edittype'];
+
+        $data = array(
+            'id' => $id,
+            'type' => $type,
+        );
+        echo json_encode(['success' => $data]);
+        $this->model->updateType($id, $type);
         require_once('views/addtype.php');
     }
 
@@ -81,5 +91,12 @@ class MovieController
     {
         $user = $this->model->listUser();
         require_once('views/listuser.php');
+    }
+
+    function deleteType()
+    {
+        $typeId = $_GET['typeId'];
+        $this->model->deleteType($typeId);
+        header('Location: ?route=addType');
     }
 }

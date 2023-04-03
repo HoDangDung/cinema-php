@@ -22,6 +22,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="views/images/hutech.png" type="image/x-icon">
   </head>
   <style>
     body {
@@ -123,7 +124,7 @@
               <button class='btn btn-info'>Đăng xuất</button>
               </a></li>";
           // hien thi avata
-          $avatar = $_SESSION['Avatar'] ?? 'avatar.jpg';
+          $avatar = $_SESSION['Avatar'] ?? 'hutech.png';
           echo "<li> <a href='?route=edit-avatar'><img width='40px' src ='views/images/" . $avatar . "'> </a> </li>";
           echo "<li><span class='nav-link font-weight-bold'>Xin chào: " . $_SESSION['Name'] . "</span></li>";
         }
