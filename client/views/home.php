@@ -1,6 +1,9 @@
 <?php
 include_once('shares/header.php');
 ?>
+<?php
+
+?>
 <section class="banner-section">
     <div class="banner-bg bg-fixed" style="background:url('views/assets/img/banner/banner-1.jpg')"></div>
     <div class="container">
@@ -24,9 +27,9 @@ include_once('shares/header.php');
                     </div>
                 </div>
                 <div class="tab-item active">
-                    <form class="ticket-search-form" method="get" action="movies.php">
+                    <form class="ticket-search-form" method="post" action="?route=search">
                         <div class="form-group large">
-                            <input type="text" placeholder="Tìm kiếm phim..."name="keyword" />
+                            <input type="text" name="search" placeholder="Tìm kiếm phim..." name="search" />
                             <button type="submit"><i class="fas fa-search"></i></button>
                         </div>
                         <div class="form-group">

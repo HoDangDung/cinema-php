@@ -12,6 +12,10 @@ $routes = [
         'controller' => 'MovieController',
         'action' => 'addType'
     ],
+    'editType' => [
+        'controller' => 'MovieController',
+        'action' => 'editType'
+    ],
     'listUser' => [
         'controller' => 'MovieController',
         'action' => 'listUser'
@@ -31,6 +35,10 @@ $routes = [
     'delete' => [
         'controller' => 'MovieController',
         'action' => 'delete'
+    ],
+    'deletetype' => [
+        'controller' => 'MovieController',
+        'action' => 'deleteType'
     ],
     'login' => [
         'controller' => 'AdminController',

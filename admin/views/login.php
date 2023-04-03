@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,11 @@
                         Password
                     </label>
                     <input class="border-none border-gray-400 rounded-lg p-2 w-full" type="password" name="pass" id="password" required="">
+                    <?php if (isset($_SESSION['Error'])) { ?>
+                        <p class="text-white"><?php echo $_SESSION["Error"] ?></p>
+                    <?php } else {unset($_SESSION['Error']);}?>
                 </div>
+
                 <div class="flex justify-center">
                     <button class="bg-red-600 hover:bg-red-300 text-white font-bold py-2 px-4 rounded">
                         Login

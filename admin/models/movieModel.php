@@ -52,6 +52,23 @@ class MovieModel
         ));
     }
 
+    function updateType($id, $type)
+    {
+        $stmt = $this->db->prepare("UPDATE types SET type=:type WHERE id =:id");
+        $stmt->execute(array(
+            ':type' => $type,
+            ':id' => $id
+        ));
+    }
+
+    function deleteType($typeId)
+    {
+        $stmt = $this->db->prepare("DELETE FROM types WHERE id = :typeId");
+        $stmt->execute(array(
+            ':typeId' => $typeId
+        ));
+    }
+
     function find($movieId)
     {
         $stmt = $this->db->prepare("SELECT * FROM movie WHERE movieId = :movieId");

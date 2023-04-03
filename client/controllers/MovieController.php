@@ -21,6 +21,11 @@ class MovieController
         require_once('views/movies.php');
     }
 
+    function search()
+    {
+        require_once('views/search.php');
+    }
+
     function moviesdetails()
     {
         $movieId = $_GET['movieId'];
@@ -33,4 +38,3 @@ class MovieController
         }
     }
 }
-

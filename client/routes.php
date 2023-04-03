@@ -12,6 +12,10 @@ $routes = [
         'controller' => 'MovieController',
         'action' => 'moviesdetails'
     ],
+    'search'=>[
+        'controller' => 'MovieController',
+        'action' => 'search'
+    ],
     'logout' => [
         'controller' => 'AcountController',
         'action' => 'logout'

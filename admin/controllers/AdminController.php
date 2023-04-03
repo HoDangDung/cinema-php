@@ -17,22 +17,21 @@ class AdminController
             session_start();
             $user = $this->model->find($acc);
             if (!empty($user)) {
-                $isLogin = password_verify($pass, $acc);
-                if (!$isLogin) {
+                if($pass == $user['pass']){
                     $_SESSION['UserId'] = $user['id'];
                     $_SESSION['Name'] = $user['account'];
                     $_SESSION['Avatar'] = $user['Avatar'];
                     header('Location: ?route=list');
                     exit();
                 } else {
-                    $_SESSION['Error'] = "Sai mat khau";
+                    $_SESSION['Error'] = "Sai mật khẩu";
                     header("Location: ?");
-                    exit;
+                    exit();
                 }
             } else {
-                $_SESSION['Error'] = "Tai khoan khong ton tai";
+                $_SESSION['Error'] = "Tài khoản không tồn tại";
                 header("Location: ?");
-                exit;
+                exit();
             }
         }
         require_once('views/login.php');
